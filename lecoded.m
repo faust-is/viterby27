@@ -36,7 +36,7 @@ streamTotalPacket = [AccessAddres,CodingIndicator,TERM1,PDU,CRC,TERM2];
 lenBlock1 = 296;
 lenBlock2 = length(streamTotalPacket) - lenBlock1;
 
-block1Demapped = PatternDemapper(streamTotalPacket,lenBlock1);
+block1Demapped = patternDemapper(streamTotalPacket,lenBlock1);
 block1 = decoderViterby(block1Demapped);
 
 AA = block1(1:32);
